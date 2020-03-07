@@ -311,11 +311,10 @@ bot.on("ready", () => {
 
 bot.on("message", async message => {
   
-  if(message.author.id !== "401083681923661825") return;
+  
+  
   /* Prefix personalizado. */
-  let prefix = prefix_db.tiene(message.guild.id)
-    ? await prefix_db.obtener(message.guild.id)
-    : "c!";
+  let prefix = prefix_db.tiene(message.guild.id) ? await prefix_db.obtener(message.guild.id) : "c!";
 
   /* Tipos. Argumentos. */
   const args = message.content
@@ -330,15 +329,6 @@ if (message.author.bot) return;
   /* BlackList */
 
   if (blacklist.tiene(message.author.id)) return;
-  const bloqueo = [
-    "419706806785409024",
-    "509208593074094090",
-    "541153275081129995",
-    "590398344820686855",
-    "523088150826975233",
-    "307664592362930191"
-  ];
-  if (bloqueo.includes(message.author.id)) return;
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

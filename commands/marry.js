@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const db = require('megadb');
 let casado = new db.crearDB('esposo_profile');
-
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
   
 let esposo = message.mentions.members.first() || message.guild.members.get(args[0]);
-if(!esposo) return message.channel.send("Mencione a su nuev@ espos@.")
-if (esposo.user.bot) return message.channel.send('No te puedes casar con un bot.')
+if(!esposo) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Mencione a su nuev@ espos@.`)
+if (esposo.user.bot) return message.channel.send(emoji.incorrecto + 'No te puedes casar con un bot.')
 if(esposo.id === message.author.id) return message.channel.send("Mencione a otro usuario.")
   
 casado.establecer(message.author.id, esposo.id);
