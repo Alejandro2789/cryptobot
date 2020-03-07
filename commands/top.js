@@ -10,10 +10,9 @@ module.exports.run = async(bot, message, args) => {
   
 let top_credits = await creditos_profile.ordenar(false, false).catch(error => error)
 let top_reps = await reps_profile.ordenar(false, false).catch(error => error)
-let top_pacmann = await top_pacman.ordenar(false, false).catch(error => error)
 
   const filter = m => m.author.id === message.author.id;
-  message.channel.send(":star2: | Top's.\n\nIngrese el nombre del top a ver, el menú deja de funcionar a los **10s.**\nEscriba `cancel` para cerrar el menú.\n```• credits = Créditos.\n• reps = Reputaciones.\n• pacman = Top victorias del pacman.```")
+  message.channel.send(":star2: | Top's Disponibles.\n\nA continuación, ingrese el nombre del top qué desea ver, este menú dejará de funcionar pasados **10 segundos.**\n:triangular_flag_on_post: Escriba `cancel` para cerrar el menú.\n```• credits = Créditos.\n• reps = Reputaciones.```")
   message.channel.awaitMessages(filter,{
     max: 1,
     time: 10000
@@ -43,19 +42,6 @@ ord.push(`[#${parseInt(x+1)}] ${user} ${top_credits[x].valor}`)
   
  
  message.channel.send(`\`\`\`🏅 Rango | Nombre | Reps\n\n${ord.slice(0, 10).join("\n")}\`\`\``)
-
-
-    }else if(collected.first().content.toLowerCase() === "pacman"){
-      
-       let ord = [];
-  for(var x = 0; x < top_pacmann.length; x++){
-    let user = bot.users.has(top_pacmann[x].clave) ? bot.users.get(top_pacmann[x].clave).username : `Salió ${top_pacmann[x].clave}`
-   ord.push(`[#${parseInt(x+1)}] ${user} ${top_pacmann[x].valor}`)
-  }
-  
- 
- message.channel.send(`\`\`\`🏅 Rango | Nombre | Victorias\n\n${ord.slice(0, 5).join("\n")}\`\`\``)
-      
     }else if(collected.first().content.toLowerCase() === "cancel"){
       message.channel.send("Cerrando menú.")
     
