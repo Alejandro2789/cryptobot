@@ -268,22 +268,6 @@ bot.on("guildDelete", async servidor => {
 
 /* -------- Evento Ready -------- */
 
-
-bot.on("ready", () => {
-   console.log(`Estoy listo!, 
-            conectado en ${bot.guilds.size} servidores y  ${bot.users.size} usuarios.`);
-
-   bot.user.setPresence( {
-       activity: {
-           name: `En Mantenimiento! ⚒️`,
-           type: "WATCHING"
-       },
-       status: "online"
-    });
-
-});
-
-/*
 bot.on("ready", () => {
   const actividad = [
    `Gracias por el apoyo! <3`,
@@ -306,7 +290,7 @@ bot.on("ready", () => {
       }
     });
   }, 10000);
-});*/
+});
 
 
 bot.on("message", async message => {
