@@ -40,6 +40,7 @@ ord.push(`[#${parseInt(x+1)}] ${user} ${top_credits[x].valor}`)
    ord.push(`[#${parseInt(x+1)}] ${user} ${top_reps[x].valor}`)
   }
       
+  
  
  message.channel.send(`\`\`\`🏅 Rango | Nombre | Reps\n\n${ord.slice(0, 10).join("\n")}\`\`\``)
     }else if(collected.first().content.toLowerCase() === "cancel"){
