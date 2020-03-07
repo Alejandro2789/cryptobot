@@ -3,7 +3,6 @@ const ms = require("ms");
 const db = require('megadb');
 let reps_profile = new db.crearDB('reputaciones');
 let creditos_profile = new db.crearDB('cantidad_creditos');
-const top_pacman = new db.crearDB("top_pacman");
 module.exports.run = async(bot, message, args) => {
 
   
@@ -34,12 +33,13 @@ ord.push(`[#${parseInt(x+1)}] ${user} ${top_credits[x].valor}`)
       
     }else if(collected.first().content.toLowerCase() === "reps"){
       
+    
      let ord = [];
   for(var x = 0; x < top_reps.length; x++){
     let user = bot.users.has(top_reps[x].clave) ? bot.users.get(top_reps[x].clave).username : `Salió ${top_reps[x].clave}`
    ord.push(`[#${parseInt(x+1)}] ${user} ${top_reps[x].valor}`)
   }
-  
+      
  
  message.channel.send(`\`\`\`🏅 Rango | Nombre | Reps\n\n${ord.slice(0, 10).join("\n")}\`\`\``)
     }else if(collected.first().content.toLowerCase() === "cancel"){
