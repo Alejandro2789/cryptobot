@@ -39,7 +39,8 @@
     "request-promise-native": "^1.0.8",
     "simple-youtube-api": "^5.2.1",
     "superagent": "^5.2.2",
-    "weez": "^1.5.7"
+    "weez": "^1.5.7",
+    "sqlite3": "^4.1.1"
   },
   "engines": {
     "node": "12.16.1.x"
