@@ -42,7 +42,7 @@
     "weez": "^1.5.7"
   },
   "engines": {
-    "node": "8.x"
+    "node": "10.x"
   },
   "repository": {
     "url": "https://github.com/CraterMaik"

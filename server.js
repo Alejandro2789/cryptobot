@@ -134,7 +134,7 @@ bot.on("roleCreate", async role => {
   let canal = role.guild.channels.get(canal_dt);
   if (!canal) return;
 
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setTitle("• Ha sido creado un rol.")
     .addField("◊ Nombre:", role.name)
     .addField("◊ ID:", role.id)
@@ -151,7 +151,7 @@ bot.on("roleDelete", async role => {
   let canal = role.guild.channels.get(canal_dt);
   if (!canal) return;
 
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setTitle("• Se ha eliminado un rol.")
     .addField("◊ Nombre:", role.name)
     .addField("◊ ID:", role.id)
@@ -168,7 +168,7 @@ bot.on("channelCreate", async channel => {
   let canal = channel.guild.channels.get(canal_dt);
   if (!canal) return;
 
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setTitle("• Un canal ha sido creado.")
     .addField("◊ Nombre:", channel.name)
     .addField("◊ ID:", channel.id)
@@ -187,7 +187,7 @@ bot.on("channelUpdate", async (oldChannel, newChannel) => {
   oldChannel.guild.fetchAuditLogs().then(logs => {
     let userID = logs.entries.first().executor.id;
 
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
       .setTitle("• Un canal fue editado.")
       .addField("◊ Antiguo Nombre:", oldChannel.name)
       .addField("◊ Nuevo Nombre:", newChannel.name)
@@ -208,7 +208,7 @@ bot.on("channelDelete", async channel => {
   let canal = channel.guild.channels.get(canal_dt);
   if (!canal) return;
 
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setTitle("• Un canal ha sido eliminado.")
     .addField("◊ Nombre:", channel.name)
     .addField("◊ ID:", channel.id)
@@ -230,7 +230,7 @@ bot.on("guildCreate", async servidor => {
 
   let canal = bot.channels.get("531925007136194561");
 
-  const new_guild = new Discord.RichEmbed()
+  const new_guild = new Discord.MessageEmbed()
     .setDescription(
       `🔢 Ahora cuento con **${bot.guilds.size}** guilds, y **${bot.users.size}** usuarios.`
     )
@@ -251,7 +251,7 @@ bot.on("guildCreate", async servidor => {
 bot.on("guildDelete", async servidor => {
   let canal = bot.channels.get("531925007136194561");
 
-  const leave_guild = new Discord.RichEmbed()
+  const leave_guild = new Discord.MessageEmbed()
     .setDescription(
       `🔢 Ahora cuento con **${bot.guilds.size}** guilds, y **${bot.users.size}** usuarios.`
     )
@@ -321,7 +321,7 @@ if (message.author.bot) return;
   /* Cuando envían un mensaje al DM. */
 
   if (message.channel.type === "dm") {
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
       .setTimestamp()
       .setTitle("Mensaje directo hacia mi!")
       .addField(
@@ -341,7 +341,7 @@ if (message.author.bot) return;
   /* Cuando mencionan al bot. */
   const botMention = new RegExp(`^<@!?${bot.user.id}>( |)$`);
   if (message.content.match(botMention)) {
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
       .setColor("#9925e7")
       .addField("**» Prefix:**", `**${prefix}**`)
       .addField("**» Menú de ayuda:**", `**${prefix}help**`)
@@ -365,7 +365,7 @@ if (message.author.bot) return;
 
   const canal = bot.channels.get("576978377353854988");
 
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setTitle("🔧 | Comando utilizado.")
     .addField(`• **Comando:**`, cmd)
