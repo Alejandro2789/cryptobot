@@ -89,7 +89,7 @@ bot.on("messageDelete", async message => {
   let canal_dt = await channel_logs.obtener(`${message.guild.id}`);
   let canal = message.guild.channels.get(canal_dt);
   if (!canal) return;
-  const mdelete = new Discord.RichEmbed()
+  const mdelete = new Discord.MessageEmbed()
     .setTitle("• Un mensaje fue eliminado.")
     .addField("◊ Autor:", `${message.author.tag} (\`${message.author.id}\`)`)
     .addField("◊ Contenido:", message)
@@ -107,7 +107,7 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   let canal_dt = await channel_logs.obtener(`${oldMessage.guild.id}`);
   let canal = oldMessage.guild.channels.get(canal_dt);
   if (!canal) return;
-  const mdelete = new Discord.RichEmbed()
+  const mdelete = new Discord.MessageEmbed()
     .setTitle("• Un mensaje fue editado.")
     .setDescription(
       `[Redirección](https://discordapp.com/channels/${oldMessage.guild.id}/${oldMessage.channel.id}/${oldMessage.id})`
