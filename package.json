@@ -22,27 +22,27 @@
     "fs": "^0.0.2",
     "got": "^9.6.0",
     "http": "^0.0.0",
-    "mal-scraper": "^2.6.5",
+    "mal-scraper": "^2.6.8",
     "megadb": "^3.0.0",
     "moment": "^2.24.0",
-    "moment-duration-format": "^2.2.2",
+    "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
-    "node-opus": "^0.3.2",
+    "node-opus": "^0.3.3",
     "opusscript": "^0.0.7",
     "pacman-djs": "^1.0.0",
-    "parse-ms": "^2.0.0",
-    "quick.db": "^7.0.0-b21",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.0.0-b22",
     "quick.hook": "^1.5.1",
     "random-puppy": "^1.1.0",
     "relevant-urban": "^2.0.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "request-promise-native": "^1.0.8",
     "simple-youtube-api": "^5.2.1",
-    "superagent": "^5.1.1",
+    "superagent": "^5.2.2",
     "weez": "^1.5.7"
   },
   "engines": {
-    "node": "12.x"
+    "node": "12.16.1.x"
   },
   "repository": {
     "url": "https://github.com/CraterMaik"
