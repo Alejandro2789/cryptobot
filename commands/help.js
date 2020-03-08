@@ -17,7 +17,7 @@ module.exports.run = async(bot, message, args) => {
   .setTitle(":flags: | Menú de ayuda.")
   .setDescription("Si necesitas ayuda, **únete** al servidor de *[soporte](https://discord.gg/WN3TNRs)* para brindarte la ayuda **necesaria.**\nSoy un bot con múltiples comandos para tú servidor, tanto **:balloon: diversión** cómo **:tools: moderación.**")
   
-  
+  .addField("• Información:", `> Mi desarrollador es \`${developer}\`, puedes ver mi lista completa de comandos usando **${prefix}comandos.**\n> Si has encontrado un error favor reportarlo con el comando **${prefix}error**.`)
   
   
   

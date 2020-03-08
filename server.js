@@ -131,7 +131,7 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
 bot.on("roleCreate", async role => {
   if (!channel_logs.tiene(`${role.guild.id}`)) return;
   let canal_dt = await channel_logs.obtener(`${role.guild.id}`);
-  let canal = role.guild.channels.get(canal_dt);
+  let canal = role.guild.channels.cache.get(canal_dt);
   if (!canal) return;
 
   const embed = new Discord.MessageEmbed()
@@ -249,7 +249,7 @@ bot.on("guildCreate", async servidor => {
 /* -------- Salida De Un Servidor -------- */
 
 bot.on("guildDelete", async servidor => {
-  let canal = bot.channels.get("531925007136194561");
+  let canal = bot.channels.cache.get("531925007136194561");
 
   const leave_guild = new Discord.MessageEmbed()
     .setDescription(
@@ -363,7 +363,7 @@ if (message.author.bot) return;
 
   if (message.author.id === "401083681923661825") return;
 
-  const canal = bot.channels.get("576978377353854988");
+  const canal = bot.channels.cache.get("576978377353854988");
 
   const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
