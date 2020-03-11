@@ -22,7 +22,7 @@ let top_reps = await reps_profile.ordenar(false, false).catch(error => error)
 
 let ord = [];
 for(var x = 0; x < top_credits.length; x++){
-let user = bot.users.cache.has(top_credits[x].clave) ? bot.users.cache.get(top_credits[x].clave).username : `Salió ${top_credits[x].clave}`
+let user = bot.users.has(top_credits[x].clave) ? bot.users.get(top_credits[x].clave).username : `Salió ${top_credits[x].clave}`
 ord.push(`⋆ ${parseInt(x+1)}  ${user}      $${top_credits[x].valor}`)
 }
   
