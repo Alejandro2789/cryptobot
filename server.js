@@ -255,7 +255,7 @@ bot.on("guildDelete", async servidor => {
     )
     .setAuthor("⏏️ Me han expulsado de un servidor, datos:", servidor.iconURL)
     .addField("🌌 Nombre:", `◆ ${servidor.name}`)
-    .addField("👤 Dueño:", `◆ ${servidor.owner.user.tag}`)
+  //  .addField("👤 Dueño:", `◆ ${servidor.owner.user.tag}`)
     .addField("👥 Miembros:", `◆ ${servidor.memberCount}`)
     .setColor("#92bbfc");
 
