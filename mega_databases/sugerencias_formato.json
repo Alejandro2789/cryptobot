@@ -302,5 +302,37 @@
       "sugerencia": "poner canal de spam",
       "autor": "BREAD CAT#7600"
     }
+  ],
+  "687859911656603669": [
+    {
+      "ID": 6,
+      "sugerencia": "<#689353290039033928> bolas",
+      "autor": "MauroGRF#5599"
+    },
+    {
+      "ID": 5,
+      "sugerencia": "<#689353290039033928>",
+      "autor": "MauroGRF#5599"
+    },
+    {
+      "ID": 4,
+      "sugerencia": "<#689353290039033928> bolas",
+      "autor": "MauroGRF#5599"
+    },
+    {
+      "ID": 3,
+      "sugerencia": "bolas",
+      "autor": "MauroGRF#5599"
+    },
+    {
+      "ID": 2,
+      "sugerencia": "bolas",
+      "autor": "MauroGRF#5599"
+    },
+    {
+      "ID": 1,
+      "sugerencia": "<#689353290039033928>",
+      "autor": "Sr. Winter#2775"
+    }
   ]
 }
