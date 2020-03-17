@@ -1,9 +1,9 @@
 {
-"install": {
+"install": {djbd
   "include": [
     "^package\\.json$",
     "^\\.env$"
-  ]
+  ]bdjsjsj
 },
 
 "restart": {
