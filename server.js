@@ -380,4 +380,4 @@ if (message.author.bot) return;
   canal.send(embed);
 });
 
-bot.login(process.env.token).catch(e => console.log(e));
+bot.login(process.env.TOKEN).catch(e => console.log(e));
