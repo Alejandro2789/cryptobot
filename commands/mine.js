@@ -3,6 +3,7 @@ const db = require("megadb");
 let creditos = new db.crearDB('cantidad_creditos');
 const boost = new db.crearDB("boost_juegos");
 const dgestor = require('discord-gestor');
+const caña = new db.crearDB("cañas");
 module.exports.run = async(bot, message, args) => {
   
 dgestor.utilidad.agregarCooldown('mine', message.author.id, {minutos: 5}, async(resp, tiempo) =>{

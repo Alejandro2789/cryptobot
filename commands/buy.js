@@ -38,10 +38,10 @@ anilloo.sumar(message.author.id, 1)
 
 } else if(canal[0] === "caña") {
 let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 400) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 200) return message.channel.send("Créditos insuficientes.")
   
   
-creditos_profile.restar(message.author.id, 400)
+creditos_profile.restar(message.author.id, 200)
 message.channel.send(":dollar: | Has comprado una caña de pescar por $200 créditos.")
 if(!cañaa.tiene(message.author.id)){
   cañaa.establecer(message.author.id, 1)
