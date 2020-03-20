@@ -3,13 +3,13 @@ const db = require("megadb");
 let creditos = new db.crearDB('cantidad_creditos');
 const boost = new db.crearDB("boost_juegos");
 const dgestor = require('discord-gestor');
-const caña = new db.crearDB("cañas");
+const pico = new db.crearDB("picos");
 const emoji = require("../emojis.json")
 module.exports.run = async(bot, message, args) => {
   
   
-if(!caña.tiene(message.author.id)) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** no puedes minar, debido a que no tienes cañas de pescar en tú inventario!`);
-caña.restar(message.author.id, 1);
+if(!pico.tiene(message.author.id)) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** no puedes minar, debido a que no tienes picos en tú inventario!`);
+pico.restar(message.author.id, 1);
   
 dgestor.utilidad.agregarCooldown('mine', message.author.id, {minutos: 5}, async(resp, tiempo) =>{
 
