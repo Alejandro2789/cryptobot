@@ -8,8 +8,8 @@ const emoji = require("../emojis.json")
 module.exports.run = async(bot, message, args) => {
   
   
-if(!pico.tiene(message.author.id)) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** no puedes minar, debido a que no tienes picos en tú inventario!`);
-pico.restar(message.author.id, 1);
+//if(!pico.tiene(message.author.id)) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** no puedes minar, debido a que no tienes picos en tú inventario!`);
+//pico.restar(message.author.id, 1);
   
 dgestor.utilidad.agregarCooldown('mine', message.author.id, {minutos: 5}, async(resp, tiempo) =>{
 
