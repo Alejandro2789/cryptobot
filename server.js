@@ -273,7 +273,8 @@ bot.on("ready", () => {
    `Gracias por el apoyo! <3`,
     `${bot.guilds.size} servidores! <3`,
     `${bot.users.size} usuarios!`,
-    `@Crypto`
+    `@Crypto`,
+    `Ganador: Ayz_Jean 🎉`
   ];
 
   console.log(
