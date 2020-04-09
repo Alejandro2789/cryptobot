@@ -17,6 +17,7 @@ let top_reps = await reps_profile.ordenar(false, false).catch(error => error)
     max: 1,
     time: 10000
   }).then(collected => {
+    console.log(collected.first())
     if(collected.first().content.toLowerCase() === "credits"){
       
 
