@@ -28,7 +28,7 @@ ord.push(`⋆ ${parseInt(x+1)}  ${user}      $${top_credits[x].valor}`)
 }
   
  const topEmbed = new Discord.RichEmbed()
- .setDescription(`🏅 ・ Nombre ・ Créditos\n\n${ord.slice(0, 10).join("\n")}`)
+ .setDescription(`🏅 ・ Nombre  Créditos\n\n${ord.slice(0, 10).join("\n")}`)
  .setColor("RANDOM")
  .setFooter(`‧ Solicitado por ${message.author.username}!`)
  
