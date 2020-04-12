@@ -286,7 +286,7 @@ bot.on("ready", () => {
     bot.user.setPresence({
       status: "online",
       game: {
-        name: "Mantenimiento. [Fluidez.]",
+        name: actividad[index],
         type: "WATCHING"
       }
     });
