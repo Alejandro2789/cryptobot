@@ -11,18 +11,18 @@ let user_id = client.users.find(x => x.username === args[0]) || message.mentions
   
 if(!user_id) return message.channel.send(`${emoji.incorrecto} **${message.author.username}** no pude encontrar al usuario **${args[0]}**!`);
   
-const filter = m => m.author.id === message.author.id;
   
 message.channel.send(`${emoji.error} El usuario encontrado fue: **${user_id.tag}.**\n¿Es este tú usuario?`).then(x => x.delete(10000));
   
-message.channel.awaitMessages(filter,{
-max: 1,
-time: 10000
-}).then(collected => {
-  
-if(collected.first().content.toLowerCase() === "si"){
-      
-message.channel.send(emoji.correcto + ` **${message.author.username}** el usuario **${user_id.tag}** acaba de ser añadido a la blacklist del bot. Razón: **${razón}**`);
+message.channel.awaitMessages(m => m.author.id == message.author.id,
+       {max: 1, time: 30000}).then(collected => {
+   
+     if (collected.first().content.toLowerCase() !== 'si' && collected.first().content.toLowerCase() !== 'no') {
+        message.channel.send('Sólo puedes usar si o no.');
+
+                     }
+     if (collected.first().content.toLowerCase() == 'si') { //Si el usuario elije la primera
+            message.channel.send(emoji.correcto + ` **${message.author.username}** el usuario **${user_id.tag}** acaba de ser añadido a la blacklist del bot. Razón: **${razón}**`);
     
 let blackEmbed = new Discord.RichEmbed()
 .setTitle("**:warning: Nuevo usuario en la lista negra del bot.**")
@@ -33,18 +33,18 @@ message.channel.send(blackEmbed);
 client.channels.get("592408829858283607").send(blackEmbed);
       
 blacklist.establecer(user_id.id, razón);    
-  
-}else if(collected.first().content.toLowerCase() === "no"){
-      
-message.channel.send(emoji.correcto + ` **${message.author.username}**, Esta bien, cerrando menú!`);
-
-}else if(collected.first().content.toLowerCase() === "cancel"){
-      
-message.channel.send(emoji.correcto + " Cerrando menú!").then(x => x.delete(10000));
-    
-    }
+       
+              }
+   if (collected.first().content.toLowerCase() == 'no') { //Si el usuario elije la segunda
+         message.channel.send(emoji.correcto + ` **${message.author.username}**, Esta bien, cerrando menú!`);
+                }
+   if (collected.first().content.toLowerCase() == 'cancel') { //Si el usuario elije la segunda
+         message.channel.send(emoji.correcto + " Cerrando menú!").then(x => x.delete(10000));
+                }
   })
 
+  
+ 
   
 };
 exports.help = {
