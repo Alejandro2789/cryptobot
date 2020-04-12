@@ -281,12 +281,12 @@ bot.on("ready", () => {
     `Estoy listo!, conectado en ${bot.guilds.size} servidores y  ${bot.users.size} usuarios.`
   );
   setInterval(() => {
-    const index = Math.floor(Math.random() * (actividad.length - 1) + 1);
+    const index = Math.floor(Math.random() * (actividad.length - 1) + 1);//actividad[index]
 
     bot.user.setPresence({
       status: "online",
       game: {
-        name: actividad[index],
+        name: "Mantenimiento. [Fluidez.]",
         type: "WATCHING"
       }
     });
