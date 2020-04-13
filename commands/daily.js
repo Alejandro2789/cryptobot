@@ -5,6 +5,9 @@ let creditos_profile = new db.crearDB('cantidad_creditos');
 const dgestor = require('discord-gestor');
 module.exports.run = async (bot, message, args) => {
 
+  if(message.author.id !== "401083681923661825") return message.channel.send("");
+  
+  
 let idioma_actual = idioma.tiene(message.author.id) ? await idioma.obtener(message.author.id) : `Español`;
   
 if(idioma_actual === "ingles"){
