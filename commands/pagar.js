@@ -4,6 +4,10 @@ let creditos_profile = new db.crearDB('cantidad_creditos');
 const idioma = new db.crearDB("lenguaje");
 module.exports.run = async (bot, message, args) => {
 
+  if(message.author.id !== "401083681923661825") return message.channel.send("Comando deshabilitado temporalmente.");
+  
+  
+  
 let idioma_actual = idioma.tiene(message.author.id) ? await idioma.obtener(message.author.id) : `Español`;
   
 if(idioma_actual === "ingles"){

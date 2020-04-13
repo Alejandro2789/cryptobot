@@ -5,6 +5,9 @@ const dgestor = require('discord-gestor');
 
 module.exports.run = async (bot, message, args) => {
 
+  if(message.author.id !== "401083681923661825") return message.channel.send("Comando deshabilitado temporalmente.");
+  
+  
    dgestor.utilidad.agregarCooldown('fish', message.author.id, {minutos: 4}, (resp, tiempo) =>{
      if (resp) {
      

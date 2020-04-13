@@ -4,7 +4,7 @@ let creditos_profile = new db.crearDB('cantidad_creditos');
 
 module.exports.run = async (bot, message, args) => {
 
-   
+   if(message.author.id !== "401083681923661825") return message.channel.send("Comando deshabilitado temporalmente.");
     let slots = ["🍊", "🍌", "🍓", "🍈"];
     let slots2 = ["🍌", "🍊", "🍓", "🍈"];
     let slots3 = ["🍌", "🍊", "🍈", "🍓"];
