@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     )
     .addField(
       "⚒ | Moderación:",
-      "`ban` - `hackban` - `unban` - `kick` - `clear` - `lock` - `unlock` - `warn` - `see_warns` - `unwarn` - `mute` - `unmute` - `tempmute`"
+      "`ban` - `hackban` - `unban` - `kick` - `clear` - `warn` - `see_warns` - `unwarn` - `mute` - `unmute` - `tempmute`"
     )
     .addField(
       "👥 | Social:",
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     )
     .addField(
       "🎮 | Juegos:",
-      "`mine` - `fish` - `apostar` - `slots` - `pacman`"
+      "`mine` - `fish` - `apostar` - `slots`"
     )
     .addField("💰 | Economía:", "`shop` - `buy` - `sell` - `transfer`")
     .addField(
@@ -33,11 +33,11 @@ module.exports.run = async (bot, message, args) => {
     )
     .addField(
       "💡 | Utilidad:",
-      "`remover` - `addrole` - `encuesta` - `roleinfo` - `canales` - `serverinfo` - `user` - `miembros` - `emojis` - `google` - `roles` - `generate-invite` - `emoji` - `create-emoji` - `suggestion` - `deny` - `accept` - `embed` - `report` - `anuncio`"
+      "`remover` - `addrole` - `encuesta` - `roleinfo` - `canales` - `serverinfo` - `user` - `miembros` - `emojis` - `google` - `roles` -  `emoji` - `create-emoji` - `suggestion` - `deny` - `accept` - `embed` - `report` - `anuncio`"
     )
     .addField(
       "⭐ | Diversión:",
-      "`anime` - `ppt` - `8ball` - `reverse` - `say` - `numero` - `rmember` - `amor` - `bminas`"
+      "`ppt` - `8ball` - `reverse` - `say` - `numero` - `rmember` - `amor` - `bminas`"
     )
     .addField(
       "🙊 | Acciones:",

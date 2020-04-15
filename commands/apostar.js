@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const db = require('megadb');
 let creditos_profile = new db.crearDB('cantidad_creditos');
-const idioma = new db.crearDB("lenguaje");
 module.exports.run = async (bot, message, args) => {
                         
 let apuesta = parseInt(args[0])

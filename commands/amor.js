@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const db = require("megadb");
-const idioma = new db.crearDB("lenguaje");
+
 
 module.exports.run = async (bot, message, args) => {
 
