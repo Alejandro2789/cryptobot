@@ -8,7 +8,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "btapi.js": "^1.0.1",
     "common-tags": "^1.8.0",
     "currency-formatter": "^1.5.5",
     "dblapi.js": "^2.4.0",
@@ -20,7 +19,7 @@
     "express": "^4.17.1",
     "flip-text": "^1.1.0",
     "fs": "^0.0.2",
-    "got": "^10.6.0",
+    "got": "^10.7.0",
     "http": "^0.0.0",
     "mal-scraper": "^2.6.8",
     "megadb": "^3.0.0",
@@ -31,7 +30,7 @@
     "opusscript": "^0.0.7",
     "pacman-djs": "^1.0.0",
     "parse-ms": "^2.0.0",
-    "quick.db": "^7.0.0-b21",
+    "quick.db": "^7.1.1",
     "quick.hook": "^1.5.1",
     "random-puppy": "^1.1.0",
     "relevant-urban": "^2.0.0",
