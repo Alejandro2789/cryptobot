@@ -2,10 +2,9 @@ const Discord = require("discord.js");
 const db = require("megadb");
 let creditos_profile = new db.crearDB('cantidad_creditos');
 const dgestor = require('discord-gestor');
-
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
-  if(message.author.id !== "401083681923661825") return message.channel.send("Comando deshabilitado temporalmente.");
   
   
    dgestor.utilidad.agregarCooldown('fish', message.author.id, {minutos: 4}, (resp, tiempo) =>{
@@ -27,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
    }, 1000)});
  
 
-if(!creditos_profile.tiene(message.author.id)) return message.channel.send("Los créditos no te alcanzan.").then(m => m.delete(3000));
+if(!creditos_profile.tiene(message.author.id)) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Los créditos no te alcanzan.`).then(m => m.delete(3000));
   
   creditos_profile.restar(message.author.id, 10)
   creditos_profile.sumar(message.author.id, minado)
