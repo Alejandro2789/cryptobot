@@ -4,7 +4,6 @@ let creditos_profile = new db.crearDB('cantidad_creditos');
 const dgestor = require('discord-gestor');
 module.exports.run = async (bot, message, args) => {
 
-if(message.author.id !== "401083681923661825") return message.channel.send("Comando deshabilitado temporalmente.");
   
 let regalo = message.mentions.members.first() || message.guild.members.get(args[0]);
 
