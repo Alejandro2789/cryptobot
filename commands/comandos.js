@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
     )
     .addField(
       "💡 | Utilidad:",
-      "`remover` - `addrole` - `encuesta` - `roleinfo` - `canales` - `serverinfo` - `user` - `miembros` - `emojis` - `google` - `roles` - `generate-invite` - `emoji` - `create-channel` - `create-category` - `create-emoji` - `suggestion` - `deny` - `accept` - `embed` - `report` - `anuncio`"
+      "`remover` - `addrole` - `encuesta` - `roleinfo` - `canales` - `serverinfo` - `user` - `miembros` - `emojis` - `google` - `roles` - `generate-invite` - `emoji` - `create-emoji` - `suggestion` - `deny` - `accept` - `embed` - `report` - `anuncio`"
     )
     .addField(
       "⭐ | Diversión:",
