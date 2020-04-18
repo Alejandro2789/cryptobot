@@ -19,6 +19,26 @@
   ],
   "665210237019750402": [
     {
+      "ID": 64,
+      "sugerencia": "poder bloquear la cámara en el punto de la escena que quisieramos y que solo pueda avanzar después de lograr hacer algo o cambiar de escena en esa parte del nivel ejemplo\nQue el nivel avance hasta cierto punto y que haya que derrotar un enemigo en particular para continuar avanzando en la escena",
+      "autor": "Cristianx1#9822"
+    },
+    {
+      "ID": 63,
+      "sugerencia": "que el juego tenga un tema de volcano",
+      "autor": "Zorhan#3413"
+    },
+    {
+      "ID": 62,
+      "sugerencia": "poder ponerle a la cámara que solo puede avanzar o moverse en la escena que elija el creador o en todas las escenas ejemplo:\nTú estás creando un nivel y la función te deja hacer que la cámara solo avance con el personaje y que no se devuelva igual al estilo de smb1",
+      "autor": "Cristianx1#9822"
+    },
+    {
+      "ID": 61,
+      "sugerencia": "poderle poner a los enemigos una habilidad y que estos al hacerte daño también te pongan dicha habilidad\ndigamos, le pones una inhabilidad a tu enemigo y al tocarte el enemigo, te quitará todas tus habilidades",
+      "autor": "Mr. R#3556"
+    },
+    {
       "ID": 60,
       "sugerencia": "configuración de movimiento de la camara ejemplo: un nivel que tenga auto avance pero que no solo vaya en una dirección si no que la cámara en ciertos momentos cambie de forma de moverse como hacía arriba o abajo o que se devuelva con algún botón o algo que ponga el creador del nivel",
       "autor": "Cristianx1#9822"
