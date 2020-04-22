@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
    
-let canal = bot.channels.get("533817280287473688");
+let canal = bot.channels.get("702638906985676841");
         
      let error = args.join(' ');
     if(!error) return message.channel.send("Ingrese el error a reportar!\nUsar de manera correcta este comando, de no ser así serás añadido a la blacklist!")
