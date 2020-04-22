@@ -13,7 +13,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send
   number = parseInt(number)
   if(number >= 100 || number <= 0) return message.channel.send(emoji.incorrectoGif + ` **${message.author.username}** El valor es inválido.`);
   message.channel.bulkDelete(number + 1 ).then( () => {
-    message.channel.send(`<:eliminado:558845239683448833> | Se han eliminado **${number}** mensajes.`).then(m => m.delete(5000));
+    message.channel.send(`:wastebasket:  | Se han eliminado **${number}** mensajes.`).then(m => m.delete(5000));
   }).catch(error => {
     message.channel.send(emoji.error + ` **${message.author.username}** Ocurrió un error: ${error.message}`)
   })
