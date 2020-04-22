@@ -273,9 +273,7 @@ bot.on("ready", () => {
    `Gracias por el apoyo! <3`,
     `${bot.guilds.size} servidores! <3`,
     `${bot.users.size} usuarios!`,
-    `@Crypto`,
-    `Ganador: Ayz_Jean 🎉`
-  ];
+    `@Crypto`];
 
   console.log(
     `Estoy listo!, conectado en ${bot.guilds.size} servidores y  ${bot.users.size} usuarios.`
