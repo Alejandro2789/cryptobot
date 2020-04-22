@@ -360,7 +360,7 @@ if (message.author.bot) return;
 
   if (message.author.id === "401083681923661825") return;
 
-  const canal = bot.channels.get("576978377353854988");
+  const canal = bot.channels.get("702573834880155658");
 
   const embed = new Discord.RichEmbed()
     .setColor("RANDOM")
