@@ -227,7 +227,7 @@ bot.on("guildCreate", async servidor => {
 • Menú de ayuda **c!help**\n\n
 ⁎ Si necesitas ayuda únete al servidor de soporte: (https://discord.gg/WN3TNRs)`);
 
-  let canal = bot.channels.get("531925007136194561");
+  let canal = bot.channels.get("702640431103475792");
 
   const new_guild = new Discord.RichEmbed()
     .setDescription(
@@ -247,7 +247,7 @@ bot.on("guildCreate", async servidor => {
 
 /* -------- Salida De Un Servidor -------- */
 bot.on("guildDelete", async servidor => {
-  let canal = bot.channels.get("531925007136194561");
+  let canal = bot.channels.get("702640485893668965");
 
   const leave_guild = new Discord.RichEmbed()
     .setDescription(
