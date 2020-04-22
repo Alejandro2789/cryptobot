@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-
+const emoji = require("../emojis.json");
 module.exports.run = async(bot, message, args) => {
   
   let emoji_name = args[0];
   if(!emoji_name) return message.channel.send("<:red_tick:642577040872308766> Ingrese el nombre del emoji.");
   
   const find_emoji = message.guild.emojis.find(x => x.name === emoji_name);
-  if(!find_emoji) return message.channel.send("<:red_tick:642577040872308766> No he podido encontrar la información del emoji.")
+  if(!find_emoji) return message.channel.send(`${emoji.incorrecto} No he podido encontrar la información del emoji.`)
   
-  const animado = find_emoji.animated ?  Si es animado.' :  '<:red_tick:642577040872308766> No es animado.'
+  const animado = find_emoji.animated ? `${emoji.nitro} Si es animado.` :  `${emoji.incorrecto} No es animado.`
   
   const embed = new Discord.RichEmbed()
   .setTitle("• Información del emoji: "+ find_emoji)
