@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
   const find_emoji = message.guild.emojis.find(x => x.name === emoji_name);
   if(!find_emoji) return message.channel.send("<:red_tick:642577040872308766> No he podido encontrar la información del emoji.")
   
-  const animado = find_emoji.animated ? '<a:nitro:646154973570269191> Si es animado.' :  '<:red_tick:642577040872308766> No es animado.'
+  const animado = find_emoji.animated ?  Si es animado.' :  '<:red_tick:642577040872308766> No es animado.'
   
   const embed = new Discord.RichEmbed()
   .setTitle("• Información del emoji: "+ find_emoji)

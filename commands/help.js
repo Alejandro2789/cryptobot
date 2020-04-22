@@ -17,7 +17,7 @@ module.exports.run = async(bot, message, args) => {
   .setTitle(":flags: | Menú de ayuda.")
  // .setDescription("Si necesitas ayuda, **únete** al servidor de *[soporte](https://discord.gg/WN3TNRs)* para brindarte la ayuda **necesaria.**\nSoy un bot con múltiples comandos para tú servidor, tanto **:balloon: diversión** cómo **:tools: moderación.**")
   .addField("• Información:", `> Mi desarrollador es \`${developer}\`, puedes ver mi lista completa de comandos usando **${prefix}comandos.**\n> Si has encontrado un error favor reportarlo con el comando **${prefix}error**.`)
-  .addField("• Enlaces:", "> <a:bungie:520311963092385793> [Invitación](https://discordapp.com/oauth2/authorize?client_id=495758665391800321&scope=bot&permissions=66583880)\n> <:DBL:639209774315208738> [Discord Bot List](https://discordbots.org/bot/495758665391800321)")
+  .addField("• Enlaces:", "> <:invitacion:702558837122793575> [Invitación](https://discordapp.com/oauth2/authorize?client_id=495758665391800321&scope=bot&permissions=66583880)\n> <:DBL:702558108555411466> [Discord Bot List](https://discordbots.org/bot/495758665391800321)")
   .addField("• Estadísticas:", `> \`-\` Servidores: **${bot.guilds.size}**\n> \`-\` Usuarios: **${bot.users.size}**\n> \`-\` Canales: **${bot.channels.size}**\n> \`-\` Conexión: **${Math.floor(bot.ping)}ms.**`)
   message.channel.send(helpEmbed)
 }
