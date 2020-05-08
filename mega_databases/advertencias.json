@@ -1150,6 +1150,12 @@
     ],
     "699103702371532801": [
       {
+        "moderador": "Lucas Delgado#0074",
+        "razon": "por inactividad",
+        "codigo": "6l10o",
+        "hora": "08/05/2020 16:15"
+      },
+      {
         "moderador": "The Susie#2359",
         "razon": "por poner pacman",
         "codigo": "2l6b",
@@ -1170,6 +1176,14 @@
         "razon": "Cambiar El Nombre Del Server Sin Permiso.",
         "codigo": "6f5o",
         "hora": "08/05/2020 15:27"
+      }
+    ],
+    "673103586745647154": [
+      {
+        "moderador": "Lucas Delgado#0074",
+        "razon": "por poner pacman",
+        "codigo": "7j8p",
+        "hora": "08/05/2020 16:07"
       }
     ]
   },
