@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const db = require('megadb');
 let creditos_profile = new db.crearDB('cantidad_creditos');
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
                         
 let apuesta = parseInt(args[0])
@@ -12,7 +13,8 @@ if(cantidad < apuesta) return message.channel.send("**Tu balance actual es __men
   
 if(!apuesta) return message.channel.send("Debes de agregar la cantidad de créditos a apostar.")
 if(!numero) return message.channel.send("Debes de ingresar el número al cuál le apuestas.")
-  
+
+if(args.join(" ").includes("-"))  return message.channel.send(emoji.incorrecto + ` **${message.author.username},** No puedes apostar cantidades negativas.`);
 if(numero > 10) return message.channel.send("**Solo puedes apostar hasta el número 10.**")
   
 const random = Math.floor(Math.random() * Math.floor(10));
