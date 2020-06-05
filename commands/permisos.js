@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-   const p = message.guild.member(bot.user).hasPermission("ADMINISTRATOR") ? '<:ol:541811896156684319>' :  '<:off:541811856252076042>'
+   const p = message.guild.member(bot.user).hasPermission("ADMINISTRATOR") ? '<a:con_permiso:718521877156593694>' :  '<:off:541811856252076042>'
 const pe = message.guild.member(bot.user).hasPermission("KICK_MEMBERS") ? '<:ol:541811896156684319>' :  '<:off:541811856252076042>'
 const per = message.guild.member(bot.user).hasPermission("BAN_MEMBERS") ? '<:ol:541811896156684319>' :  '<:off:541811856252076042>'
 const perm = message.guild.member(bot.user).hasPermission("READ_MESSAGES") ? '<:ol:541811896156684319>' :  '<:off:541811856252076042>'
