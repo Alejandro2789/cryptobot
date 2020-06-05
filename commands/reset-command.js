@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
 if (message.author.id !== "401083681923661825") return;
   
-  if(!args || args.length < 1) return message.reply(emoji.incorrecto + ` **${message.author.username}**Ingresa el comando a reiniciar.`);
+  if(!args || args.length < 1) return message.reply(emoji.incorrecto + ` **${message.author.username},** Ingresa el nombre del comando a reiniciar.`);
   const commandName = args[0];
   // Check if the command exists and is valid
   if(!bot.commands.has(commandName)) {
