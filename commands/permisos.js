@@ -15,6 +15,7 @@ const permisoss = message.guild.member(bot.user).hasPermission("MANAGE_GUILD") ?
 
  let embed = new Discord.RichEmbed()
  .setTitle(`<:list:702555554584723526> Lista de permisos para ${message.guild.name}.`)
+ .setDescription(":star: Sí el emoji es el siguiente: <a:con_permiso:718521877156593694>, significa qué tiene el permiso, sí es este: <a:sin_permiso:718521825784758345>, significa qué no lo tiene.")
  .addField("• Administrator:", `${p}`)
  .addField("• Kick Members:", `${pe}`)
  .addField("• Ban Members:", `${per}`)

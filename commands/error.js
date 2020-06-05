@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
    
 let canal = bot.channels.get("702674835343409193");
         
-     let error = args.join(' ');
-    if(!error) return message.channel.send("Ingrese el error a reportar!\nUsar de manera correcta este comando, de no ser así serás añadido a la blacklist!")
-   
+let error = args.join(' ');
+if(!error) return message.channel.send("Ingrese el error a reportar!\nUsar de manera correcta este comando, de no ser así serás añadido a la blacklist!")
+if(error.length <)   
    
     
     const embed = new Discord.RichEmbed()
