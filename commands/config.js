@@ -1,13 +1,14 @@
 const Discord = require("discord.js");
 const db = require("megadb");
 const cantidad_reportes = new db.crearDB("cantidad_reportes");
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
 if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send("No tengo permisos.")
 if(!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("<:incorrecto:558845297447403558> | No tienes los permisos necesarios.")
   
 if(args[0] === "delete"){
-  message.channel.send("<:correcto:558845268800307229> El número de reportes se ha eliminado.");
+  message.channel.send(emoji.correcto + ` **$**El número de reportes se ha eliminado.`);
   cantidad_reportes.eliminar(message.guild.id).catch(error => message.channel.send(error));
   
 }else if(args[0] === "set"){
