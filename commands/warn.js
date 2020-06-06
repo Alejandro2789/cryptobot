@@ -24,15 +24,15 @@ if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(em
 
   let usuario = message.mentions.members.first() || bot.users.get(args[0]);
   
-if(!usuario) return message.channel.send("<:red_tick:642577040872308766> Mencione el usuario a advertir.");
+if(!usuario) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Mencione el usuario a advertir.`);
   
 let rol_autor = message.member.highestRole;
 let rol_mencionado = usuario.highestRole;
-if(rol_autor.position < rol_mencionado.position) return message.channel.send("<:red_tick:642577040872308766> El usuario mencionado tiene un rol mayor al tuyo.")
+if(rol_autor.position < rol_mencionado.position) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** El usuario mencionado tiene un rol mayor al tuyo.`)
   
   
   
-if(usuario.id === message.author.id) return message.channel.send("<:red_tick:642577040872308766> No te puedes advertir a ti mismo.");
+if(usuario.id === message.author.id) return message.channel.send(emoji.incorrecto + ` **${}**No te puedes advertir a ti mismo.`);
 if(usuario.user.bot === true) return message.channel.send("<:red_tick:642577040872308766> No puedes advertir a un bot.")
 if(usuario.id === "495758665391800321") return message.channel.send("<:red_tick:642577040872308766> A mí no me puedes advertir.")
 let razon = args.slice(1).join(' ');
