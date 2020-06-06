@@ -32,9 +32,9 @@ if(rol_autor.position < rol_mencionado.position) return message.channel.send(emo
   
   
   
-if(usuario.id === message.author.id) return message.channel.send(emoji.incorrecto + ` **${}**No te puedes advertir a ti mismo.`);
-if(usuario.user.bot === true) return message.channel.send("<:red_tick:642577040872308766> No puedes advertir a un bot.")
-if(usuario.id === "495758665391800321") return message.channel.send("<:red_tick:642577040872308766> A mí no me puedes advertir.")
+if(usuario.id === message.author.id) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** No te puedes advertir a ti mismo.`);
+if(usuario.user.bot === true) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** No puedes advertir a un bot.`)
+if(usuario.id === "495758665391800321") return message.channel.send(emoji.incorrecto + ` **${message.author.username},** A mí no me puedes advertir.`)
 let razon = args.slice(1).join(' ');
 if(!razon) razon = "No especificada."
   
