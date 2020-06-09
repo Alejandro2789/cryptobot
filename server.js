@@ -92,7 +92,7 @@ bot.on("messageDelete", async message => {
   const mdelete = new Discord.RichEmbed()
     .setTitle("• Un mensaje fue eliminado.")
     .addField("╴ Autor:", `↳ ${message.author.tag} (\`${message.author.id}\`)`)
-    .addField("╴ Contenido:", `↳ ${message} \`(${message.content.length} carácteres.)\` `)
+    .addField("╴ Contenido:", `↳ ${message} (\`${message.content.length} carácteres\`) `)
     .addField("╴ Canal:", `↳ ${message.channel} (\`${message.channel.id}\`)`)
     .setFooter(new Date().toDateString())
     .setColor("RED");
@@ -111,10 +111,10 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   const mdelete = new Discord.RichEmbed()
     .setTitle("• Un mensaje fue editado.")
     .setDescription(`[Redirección](https://discordapp.com/channels/${oldMessage.guild.id}/${oldMessage.channel.id}/${oldMessage.id})`)
-    .addField("╴ Autor:", `${oldMessage.author.tag} (\`${oldMessage.author.id}\`)`)
-    .addField("╴ Antes:", oldMessage.content)
-    .addField("╴ Después:", newMessage.content)
-    .addField("╴ Canal:",`${oldMessage.channel} (\`${oldMessage.channel.id}\`)`)
+    .addField("╴ Autor:", `↳ ${oldMessage.author.tag} (\`${oldMessage.author.id}\`)`)
+    .addField("╴ Antes:", `↳ ${oldMessage.content}`)
+    .addField("╴ Después:", `↳ ${newMessage.content}`)
+    .addField("╴ Canal:",`↳ ${oldMessage.channel} (\`${oldMessage.channel.id}\`)`)
     .setFooter(new Date().toDateString())
     .setColor("RED");
   canal.send(mdelete);
