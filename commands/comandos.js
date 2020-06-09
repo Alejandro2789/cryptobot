@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const emoji = require("..emojis.json");
+const emoji = require("../emojis.json");
 
 module.exports.run = async (bot, message, args) => {
   const comandos = new Discord.RichEmbed()
     .setColor(0x00ae86)
     .setDescription(
-      `A continuación te presento la lista de comandos, si tienes alguna duda puedes unirte al servidor de [soporte](https://discord.gg/B3eTuYv).`
+      `${emoji.correcto} A continuación te presento la lista de comandos, si tienes alguna duda puedes unirte al servidor de [soporte](https://discord.gg/B3eTuYv).`
     )
     .addField(
       "🤖 | Crypto Commands:",
