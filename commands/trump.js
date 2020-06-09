@@ -7,6 +7,7 @@ module.exports.run = async (bot, message, args) => {
       var weez = new Weez.WeezAPI("8S0TVYhybBtPks4qYJp7zPoNwhigiBMK9uvY");
   
       let texto = args.join(" ");
+      if(texto.length > 24) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Los carácteres no pueden superar los 24.`)
       if(!texto) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Ingrese la nueva ley.`)
   
       let img = await weez.trump(texto)
