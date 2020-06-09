@@ -84,7 +84,7 @@ if(args[0] === "bc1"){
   background.establecer(message.author.id, "https://i.imgur.com/of6cXgC.png");
     
     const embed = new Discord.RichEmbed()
-  .setTitle(`${} Fondo equipado!`)
+  .setTitle(`${emoji.correcto} Fondo equipado!`)
   .setDescription("Te has equipado el fondo **#8.**")
   .setImage("https://i.imgur.com/of6cXgC.png")
   .setColor("#d0ffff")
@@ -93,7 +93,7 @@ if(args[0] === "bc1"){
    background.establecer(message.author.id, "https://i.imgur.com/nBayhS0.png");
     
     const embed = new Discord.RichEmbed()
-  .setTitle("<:correcto:558845268800307229> Fondo equipado!")
+  .setTitle(`${emoji.correcto} Fondo equipado!`)
   .setDescription("Te has equipado el fondo **#9.**")
   .setImage("https://i.imgur.com/nBayhS0.png")
   .setColor("#d0ffff")
