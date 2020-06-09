@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
-
+const emoji = require("../emojis.json");
 
 module.exports.run = async (bot, message, args) => {
 
-if(message.guild.id !== "52004870881804289") return;
+if(message.guild.id !== "702338467924803626") return;
   
   
   
@@ -30,7 +30,7 @@ message.guild.member(miembro).addRole("719953921287782420")
   
 message.channel.send(":white_check_mark: **Rol entregado, ahora recibirás una notificación cada vez qué se actualize Crypto!**");
 }else{
-  message.channel.send("Rol equivocado!\n\n- Opciones: **'sorteos'** , **'anuncios'** , **'actualizaciones'**")
+  message.channel.send(`${emoji.incorrectoGif} Rol equivocado!\n\n<:list:702555554584723526> Opciones: **'sorteos'** , **'prefieres'** , **'actualizaciones'**`)
 }
 
 }
