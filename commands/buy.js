@@ -117,18 +117,7 @@ bot.channels.get("597516842072014858").send(`\`-\` El usuario **${message.author
    }
    
    
-      
-} else if(canal[0] === "regalo") {
-let cantidad = await creditos_profile.obtener(message.author.id)
-if(cantidad < 1000) return message.channel.send("Créditos insuficientes.")
   
-creditos_profile.restar(message.author.id, 1000);
-message.channel.send(`:gift: **${message.author.username}** has comprado un regalo. ¡Disfruta!`)
-  if(!regalo.tiene(message.author.id)){
-    regalo.establecer(message.author.id, 1)
-  }else{
-    regalo.sumar(message.author.id, 1)
-  }
 }else{
   message.channel.send("Ingrese el nombre el ítem a comprar.");
 }
