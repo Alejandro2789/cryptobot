@@ -11,6 +11,7 @@ if (usuario.user.bot) return message.channel.send('No puedes darle rep a un bot.
 if(message.author.id === usuario.id) return message.channel.send(":anger: | No puedes darte reputación a tí mismo.").then(m => m.delete(3000))
 const bloqueo = ["419706806785409024" , "509208593074094090" , "541153275081129995" , "590398344820686855" , "523088150826975233" , "307664592362930191"];
 if(bloqueo.includes(usuario.id)) return;
+  
 dgestor.utilidad.agregarCooldown('reputación' , message.author.id , {horas: 7}, (resp, tiempo) =>{
     if (resp) {
 
