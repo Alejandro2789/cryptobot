@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   
 let estado;
 if(channel_logs.tiene(message.guild.id)){
-  estado="<:on:541811896156684319> Activo"
+  estado=`${emoji.correcto} Activo`
 }else{
   estado="<:off:541811856252076042> No activo"
 }
