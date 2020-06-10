@@ -20,6 +20,10 @@ module.exports.run = async(bot, message, args) => {
   .addField("• Enlaces:", "> <a:invitacion:702558837122793575> [Invitación](https://discordapp.com/oauth2/authorize?client_id=495758665391800321&scope=bot&permissions=66583880)\n> <:DBL:702558108555411466> [Discord Bot List](https://discordbots.org/bot/495758665391800321)")
   .addField("• Estadísticas:", `> \`-\` Servidores: **${bot.guilds.size}**\n> \`-\` Usuarios: **${bot.users.size}**\n> \`-\` Canales: **${bot.channels.size}**\n> \`-\` Conexión: **${Math.floor(bot.ping)}ms.**`)
   message.channel.send(helpEmbed)
+  
+  
+  const Embed = new Discord.RichEmbed()
+  
 }
 module.exports.help = {
   name:"help",
