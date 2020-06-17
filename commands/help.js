@@ -22,13 +22,13 @@ module.exports.run = async(bot, message, args) => {
   message.channel.send(helpEmbed)
   
   
-  const Embed = new Discord.RichEmbed()
+  /*const Embed = new Discord.RichEmbed()
   .setTitle("<:bienvenido:702575178831626240> ¡Se agradece si rellenas este formulario!")
   .addField("- Link:", "https://forms.gle/dC6fVgWqYrZbDB3o7")
   .setFooter("⭐ ¡Se agradece tú colaboración!")
   
   
-  message.channel.send(Embed);
+  message.channel.send(Embed);*/
 }
 module.exports.help = {
   name:"help",

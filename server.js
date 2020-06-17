@@ -265,7 +265,6 @@ bot.on("ready", () => {
   const actividad = [
    `Gracias por el apoyo! <3`,
     `${bot.guilds.size} servidores! <3`,
-    `⭐ Formulario de Crypto: https://forms.gle/dC6fVgWqYrZbDB3o7`,
     `${bot.users.size} usuarios!`,
     `@Crypto`];
 
