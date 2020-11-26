@@ -265,7 +265,7 @@ bot.on("ready", () => {
   const actividad = [
    `Gracias por el apoyo! <3`,
     `${bot.guilds.size} servidores! <3`,
-    `${bot.users.size} usuarios!`,
+    `${bot.users.size.toLocaleString()} usuarios!`,
     `@Crypto`];
 
   console.log(
