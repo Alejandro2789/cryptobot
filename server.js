@@ -372,4 +372,4 @@ bot.on("message", async message => {
   canal.send(embed);
 });
 
-bot.login(process.env.TOKEN).catch(e => console.log(e));
+bot.login(process.env.TOKEN)s.catch(e => console.log(e));
