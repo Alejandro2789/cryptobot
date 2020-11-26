@@ -351,7 +351,7 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if (commandfile) commandfile.run(bot, message, args, prefix);
 
-  if (message.author.id === "401083681923661825") return;
+  if (message.author.id != "401083681923661825") return;
 
   const canal = bot.channels.get("702573834880155658");
 
@@ -372,4 +372,4 @@ bot.on("message", async message => {
   canal.send(embed);
 });
 
-bot.login(process.env.TOKEN)s.catch(e => console.log(e));
+bot.login(process.env.TOKEN).catch(e => console.log(e));

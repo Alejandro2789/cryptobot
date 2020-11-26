@@ -8,8 +8,8 @@ module.exports.run = async (bot, message, args) => {
 message.delete();
   
 let usuario = message.mentions.members.first() || message.guild.members.get(args[0]);
-if(!usuario) return message.channel.send(emoji.incorrecto + ` **${message.author.username}** Menciona a un usuario.`);
-if(message.author.id === usuario.id) return message.channel.send(emoji.incorrecto + ` **${message.author.username}** No puedes banearte a ti mismo.`);
+if(!usuario) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** Menciona a un usuario.`);
+if(message.author.id === usuario.id) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** No puedes banearte a ti mismo.`);
 
 if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send(emoji.incorrecto + ` **${message.author.username}** No tengo los permisos suficientes para ejecutar esta acción.`);
 if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(emoji.incorrectoGif + ` **${message.author.username}** No tienes los permisos necesarios para ejecutar este comando.`);
