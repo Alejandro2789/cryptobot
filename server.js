@@ -58,6 +58,14 @@ function T_convertor(ms) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+var Client = require('uptime-robot');
+var cl = new Client('u666599-a7c9f0e9cb8d8bd77df2edbd');
+cl.getMonitors({customUptimeRatio: [1, 7, 30]}, function (err, res) {
+  if (err) throw err;
+  console.dir(res);
+});
+
 /* Command Handler. */
 
 fs.readdir("./commands/", (err, files) => {
