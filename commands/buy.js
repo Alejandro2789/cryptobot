@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const db = require("megadb");
 let creditos_profile = new db.crearDB('cantidad_creditos');
+const emoji = require("../emojis.json");
 
 const anilloo = new db.crearDB("anillos");
 const picoo = new db.crearDB("picos");

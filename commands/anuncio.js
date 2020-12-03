@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const emoji = require("../emojis.json");
-
 module.exports.run = async (bot, message, args) => {
 
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(emoji.incorrectoGif + ` **${message.author.username}** No tienes los permisos necesarios para ejecutar este comando.`);
@@ -12,7 +11,7 @@ if(!args.join(" ")) return message.channel.send(emoji.incorrecto + ` **${message
 
   const newArgs = args.slice(1).join(" ").split(" | ");
 
-const anuncioEmbed = new Discord.RichEmbed()
+const anuncioEmbed = new Discord.MessageEmbed()
 .setTitle(args[0])
 .setDescription(newArgs.map((x, i) => `${"•"} ${x}`).join("\n"))
 .setColor("#B2FFFF")

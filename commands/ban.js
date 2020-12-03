@@ -26,7 +26,7 @@ message.channel.send(`${emoji.correcto} Usuario baneado.\n\n- El usuario **${usu
 let c = canal_mod.tiene(message.guild.id) ? await canal_mod.obtener(message.guild.id) : message.channel.id;
 let canal = message.guild.channels.get(c);
         
-const embed = new Discord.RichEmbed()
+const embed = new Discord.MessageEmbed()
 .setTitle("<:banhammer:558845332956512257> Usuario Baneado")
 .setColor("#ff0000")
 .addField("﹥Usuario:", `${usuario.user.tag}, con la ID: ${usuario.id}`)
