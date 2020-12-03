@@ -20,7 +20,7 @@ let cantidad = parseInt(canal[1])
 
 if(canal[0] === "anillo"){
 let cantidad = await creditos_profile.obtener(message.author.id)
-if(cantidad < 1000) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 1000) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
 
   
 creditos_profile.restar(message.author.id, 1000)
@@ -39,7 +39,7 @@ anilloo.sumar(message.author.id, 1)
 
 } else if(canal[0] === "caña") {
 let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 200) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 200) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
   
   
 creditos_profile.restar(message.author.id, 200)
@@ -56,7 +56,7 @@ cañaa.sumar(message.author.id, 1)
 } else if(canal[0] === "pico") {
   
   let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 400) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 400) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
   
   
 creditos_profile.restar(message.author.id, 400)
@@ -71,7 +71,7 @@ picoo.sumar(message.author.id, 1)
   } else if(canal[0] === "galleta") {
   
   let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 100) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 100) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
   
   
 creditos_profile.restar(message.author.id, 100)
@@ -87,7 +87,7 @@ galetaa.sumar(message.author.id, 1)
  } else if(canal[0] === "radio") {
   
   let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 900) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 900) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
   
   
 creditos_profile.restar(message.author.id, 900)
@@ -100,7 +100,7 @@ radioo.sumar(message.author.id, 1)
    }} else if(canal[0] === "booster_juegos") {
   
   let cantidad = await creditos_profile.obtener(message.author.id);
-if(cantidad < 4600) return message.channel.send("Créditos insuficientes.")
+if(cantidad < 4600) return message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Créditos insuficientes.`)
   
   
 creditos_profile.restar(message.author.id, 4600)
@@ -120,7 +120,7 @@ bot.channels.get("597516842072014858").send(`\`-\` El usuario **${message.author
    
   
 }else{
-  message.channel.send("Ingrese el nombre el ítem a comprar.");
+  message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Ingrese el nombre el ítem a comprar.`);
 }
 
   
