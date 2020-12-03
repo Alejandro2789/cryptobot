@@ -25,7 +25,7 @@ if(!role){
   
 usuario.addRole(role);
   
-const embed = new Discord.RichEmbed()
+const embed = new Discord.MessageEmbed()
 .setTitle("Rol añadido.")
 .setColor("RANDOM")
 .setDescription(`${emoji.correcto} | ${message.author.username} el rol ${role} ha sido añadido al usuario.`)

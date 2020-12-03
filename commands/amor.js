@@ -1,12 +1,11 @@
 const Discord = require("discord.js");
 const db = require("megadb");
-
-
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
 
 let users = message.mentions.users.map(m => m.username).join(' y ');
-   if(!users) return message.channel.send('<:incorrecto:558845297447403558> | Mencioné a 2 usuarios para calcular, separados por \`"y"\`.').then(m => m.delete(3000));
+   if(!users) return message.channel.send(emoji.i` Mencioné a 2 usuarios para calcular, separados por \`"y"\`.').then(m => m.delete(3000));
     
 const random = Math.floor(Math.random() * 100);
 let heard = "";
