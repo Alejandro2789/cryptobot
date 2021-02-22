@@ -23,7 +23,7 @@ const random = Math.floor(Math.random() * Math.floor(10));
   
 if(numero === random){
   
-const embed = new Discord.RichEmbed()
+const embed = new Discord.MessageEmbed()
 .setTitle(":slot_machine: Apuestas.")
 .setDescription(`__Resultado:__ **${random}**\n\n+ **${doble}** créditos agregados a tu cuenta!`)
 .setColor("#5668ec")
@@ -39,7 +39,7 @@ const embed = new Discord.RichEmbed()
 }
   
 else{
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
 .setTitle(":slot_machine: Apuestas.")
 .setDescription(`__Resultado:__ **${random}**\n\n- **${apuesta}** créditos eliminados de tu cuenta!`)
 .setColor("#5668ec")

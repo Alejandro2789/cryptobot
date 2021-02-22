@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const db = require("megadb");
 let creditos_profile = new db.crearDB('cantidad_creditos');
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
 message.delete();
@@ -10,10 +11,10 @@ let creditos = parseInt(args[1]);
   
 if(!creditos_profile.tiene(miembro.id)){
   creditos_profile.establecer(miembro.id, creditos)
-  message.channel.send(`:white_check_mark: **$${args[1]} créditos** añadidos a ${miembro.user.username}!`)
+  message.channel.send(emoji.correcto + ` **$${args[1]} créditos** añadidos a ${miembro.user.username}!`)
 }else{
   creditos_profile.sumar(miembro.id, creditos)
-  message.channel.send(`:white_check_mark: **$${args[1]} créditos** añadidos a ${miembro.user.username}!`)
+  message.channel.send(emoji.correcto + ` **$${args[1]} créditos** añadidos a ${miembro.user.username}!`)
 }
 
   

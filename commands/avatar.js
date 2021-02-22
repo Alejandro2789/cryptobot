@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let img = message.mentions.users.first()
   if (!img) {
 
-      const embed = new Discord.RichEmbed()
+      const embed = new Discord.MessageEmbed()
       .setDescription(`[🔗 | Descargar.](${message.author.avatarURL})`)
       .setImage(`${message.author.avatarURL}`)
       .setColor("RANDOM")
@@ -16,11 +16,11 @@ module.exports.run = async (bot, message, args) => {
 
   } else if (img.avatarURL === null) {
 
-      message.channel.sendMessage("El usuario ("+ img.username +") no tiene avatar!");
+      message.channel.send("El usuario ("+ img.username +") no tiene avatar!");
 
   } else {
 
-      const embed = new Discord.RichEmbed()
+      const embed = new Discord.MessageEmbed()
       .setDescription(`[🔗 | Descargar.](${img.avatarURL})`)
       .setImage(`${img.avatarURL}`)
       .setColor("RANDOM")

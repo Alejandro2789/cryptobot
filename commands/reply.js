@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const db = require("megadb");
 const suge = new db.crearDB("canal_sugerencias");
 let prefix_db = new db.crearDB("prefixes");
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
   
    let prefix;
@@ -12,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
        }
   
   
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("<:incorrecto:558845297447403558> | No tienes los permisos necesarios.")
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(emoji.incorrectoGif + ` **${message.author.username}** No tienes los permisos necesarios para ejecutar este comando.`)
  
   let id_canal = await suge.obtener(message.guild.id);
   
@@ -22,12 +23,12 @@ module.exports.run = async (bot, message, args) => {
   if(!argumentos[0]) return message.channel.send(`__Formato de respuesta inválido.__\n\n**Uso correcto:** \`${prefix}reply <ID_Mensaje> | <Respuesta>\`\nDebes de respetar los espacios en el comando, de lo contrario no funcionará correctamente.`)
 
  
-  if(isNaN(argumentos[0])) return message.channel.send("<:incorrecto:558845297447403558> | Necesitas colocar la cantidad a tranferir, no símbolos ni letras.").then(m => m.delete(3000))
+  if(isNaN(argumentos[0])) return message.channel.send(emoji.incorrecto + ` **${message.author.username}** Necesitas colocar la cantidad a tranferir, no símbolos ni letras.`).then(m => m.delete(3000))
 
   bot.channels.get(id_canal).fetchMessage(argumentos[0]).then(messagea => messagea.edit(messagea.content  +  ` \n\n▸ Respuesta por ${message.author.username}:\n\n**${argumentos[1]}**`)).then(x => message.channel.send("La sugerencia se ha editado con éxito.").then(x => x.react("✅")))
     
   .catch(() => {
-      message.channel.send(`Esa ID no le corresponde a ningún mensaje.`)
+      message.channel.send(emoji.incorrectoGif + ` Esa ID no le corresponde a ningún mensaje.`)
     })
                                                          
   

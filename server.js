@@ -264,12 +264,12 @@ bot.on("guildDelete", async servidor => {
 bot.on("ready", () => {
   const actividad = [
    `Gracias por el apoyo! <3`,
-    `${bot.guilds.size} servidores! <3`,
-    `${bot.users.size} usuarios!`,
+    `En ${bot.guilds.size} servidores! <3`,
+    `⚒️ En mantenimiento.`,
     `@Crypto`];
 
   console.log(
-    `Estoy listo!, conectado en ${bot.guilds.size} servidores y  ${bot.users.size} usuarios.`
+    `Estoy listo!, conectado en ${bot.guilds.size} servidores.`
   );
   setInterval(() => {
     const index = Math.floor(Math.random() * (actividad.length - 1) + 1);//actividad[index]
@@ -351,7 +351,7 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if (commandfile) commandfile.run(bot, message, args, prefix);
 
-  if (message.author.id === "401083681923661825") return;
+  if (message.author.id != "401083681923661825") return;
 
   const canal = bot.channels.get("702573834880155658");
 

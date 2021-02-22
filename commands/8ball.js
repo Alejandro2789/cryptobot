@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
  
     let pregunta = args.slice(1).join(" ");
     if (!pregunta)
       return message.channel
-        .send("<:incorrecto:558845297447403558> | Escriba una pregunta.")
+        .send(emoji.incorrecto + ` **${message.author.username},** Escriba una pregunta.`)
         .then(m => m.delete(3000));
 
     var choices = [
@@ -34,15 +34,13 @@ module.exports.run = async (bot, message, args) => {
       "✦ **Muy dudoso.**",
       "✦ **Las posibilidades no son buenas.**"
     ];
-    var embed = new Discord.RichEmbed()
-      .setAuthor(
-        "Crypto 8ball",
-        "http://www.pngmart.com/files/3/8-Ball-Pool-PNG-Photos.png"
-      )
+  
+    var embed = new Discord.MessageEmbed()
+      .setAuthor("Crypto 8ball" , "http://www.pngmart.com/files/3/8-Ball-Pool-PNG-Photos.png")
       .setDescription(`${choices[Math.floor(Math.random() * choices.length)]}`)
       .setColor("RANDOM");
 
-    message.channel.send(embed);
+      message.channel.send(embed);
 };
 module.exports.help = {
   name: "8ball",

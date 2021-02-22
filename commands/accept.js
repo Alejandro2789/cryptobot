@@ -30,7 +30,7 @@ let autor = suggest.autor;
 let sugerencia = suggest.sugerencia;
 let id = suggest.ID;
   
-const s = new Discord.RichEmbed()
+const s = new Discord.MessageEmbed()
 .setTitle("✅ ╏ Sugerencia Aceptada")
 .setDescription(`${sugerencia}`)
 .addField(`**• Sugerente:**`,message.author.tag)

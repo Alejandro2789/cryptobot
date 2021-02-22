@@ -7,9 +7,9 @@ module.exports.run = async (bot, message, args) => {
   
 let estado;
 if(suge.tiene(message.guild.id)){
-  estado="<:on:541811896156684319> Activas"
+  estado=`${emoji.encendido} Activas`
 }else{
-  estado="<:off:541811856252076042> No activas"
+  estado=`${emoji.apagado} No activas`
 };
   
 let prefix = prefix_db.tiene(message.guild.id) ? await prefix_db.obtener(message.guild.id) : "c!";
