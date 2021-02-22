@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+/*const Discord = require("discord.js");
 const db = require("megadb");
 const blacklist = new db.crearDB("blacklist");
 const emoji = require("../emojis.json");
@@ -50,4 +50,4 @@ blacklist.establecer(user_id.id, razón);
 exports.help = {
   name: 'blacklist',
   aliases: [""]
-};
+};*/

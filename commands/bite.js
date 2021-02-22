@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-
+const emoji = require("../emojis.json");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -10,11 +10,11 @@ module.exports.run = async (bot, message, args) => {
                   "https://pa1.narvii.com/6108/fd438b7ac4062319aa78e9ddf8e9220eb8ac1a2a_hq.gif"]
               
            
-if(!member) return message.channel.send('<:incorrecto:558845297447403558> | Menciona a un usuario.').then(m => m.delete(3000))
-if(message.author.id === member.id) return message.channel.send("Menciona a otro usuario.").then(m => m.delete(3000))
-if(member.user.bot === true) return message.channel.send("<:red_tick:642577040872308766> Menciona a otro usuario.")
+if(!member) return message.channel.send(emoji.incorrecto + ` **${message.author.name},** Menciona a un usuario.`).then(m => m.delete(3000))
+if(message.author.id === member.id) return message.channel.send(emoji.incorrecto + ` **${message.author.name},** Menciona a otro usuario.`).then(m => m.delete(3000))
+if(member.user.bot === true) return message.channel.send(emoji.incorrecto + ` **${message.author.name},** Menciona a otro usuario.`)
   
-var embed = new Discord.RichEmbed()
+var embed = new Discord.MessageEmbed()
   .setColor(3447003)
   .setDescription('**'+ message.author.username +' mordió a  '+ member.user.username +' owo **')
   .setImage(bite[Math.floor(Math.random() * bite.length)])

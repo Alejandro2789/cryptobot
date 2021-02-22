@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const Minesweeper = require('discord.js-minesweeper');
-
+const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
     const one = Math.floor(Math.random() * 100) + 1;
@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
  
     return matrix
       ? message.channel.send(matrix)
-      : message.channel.send('Ha ocurrido un error.');
+      : message.channel.send(emoji.incorrectoGif + ` **${message.author.name},** Ha ocurrido un error.`);
 
 }
 module.exports.help = {

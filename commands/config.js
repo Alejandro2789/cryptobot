@@ -4,8 +4,8 @@ const cantidad_reportes = new db.crearDB("cantidad_reportes");
 const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
-if(!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.channel.send("No tengo permisos.")
-if(!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send("<:incorrecto:558845297447403558> | No tienes los permisos necesarios.")
+
+if(!message.member.hasPermission("MANAGE_CHANNELS")) return message.channel.send(emoji.incorrectoGif + ` **${message.author.username}** No tienes los permisos necesarios para ejecutar este comando.`)
   
 if(args[0] === "delete"){
   message.channel.send(emoji.correcto + ` **${message.author.username},** El número de reportes se ha eliminado.`);
@@ -22,7 +22,7 @@ if(args[0] === "delete"){
  
   const errEmbed = new Discord.RichEmbed()
   .setColor("#5bffff")
-  .setTitle("<:incorrecto:558845297447403558> Error: Faltan argumentos.")
+  .setTitle(emoji.incorrecto + ` Error: Faltan argumentos.`)
   .addField("ℹ Establece el número de reportes del servidor:", "`<prefix>config set <cantidad>`")
   .addField("ℹ Elimina el número de reportes del servidor:", "`<prefix>config delete`")
   message.channel.send(errEmbed)

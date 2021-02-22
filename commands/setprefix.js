@@ -4,8 +4,7 @@ let prefix_db = new db.crearDB("prefixes");
 const emoji = require("../emojis.json");
 module.exports.run = async (bot, message, args) => {
 
-if(!message.guild.me.hasPermission("MANAGE_GUILD")) return message.channel.send("No tengo permisos.").then(m => m.delete(3000))
-if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("<:incorrecto:558845297447403558> | No tienes los permisos necesarios.").then(m => m.delete(3000))
+if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send(emoji.incorrecto + ` **${message.author.username},** No tienes los permisos necesarios.`).then(m => m.delete(3000))
 if(!args[0]) return message.channel.send(`${emoji.incorrecto} Nesecitas colocar el prefix a cambiar.`).then(m => m.delete(3000))
      prefix_db.establecer(`${message.guild.id}`, args[0])
       var embed = new Discord.RichEmbed()

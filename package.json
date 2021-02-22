@@ -10,7 +10,7 @@
   "dependencies": {
     "currency-formatter": "^1.5.5",
     "discord-gestor": "^1.1.1",
-    "discord.js": "^11.1.0",
+    "discord.js": "^12.5.0",
     "discord.js-commando": "^0.10.0",
     "discord.js-minesweeper": "^1.0.5",
     "express": "^4.17.1",
