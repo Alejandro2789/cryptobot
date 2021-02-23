@@ -2,10 +2,10 @@
   "name": "crys",
   "version": "0.0.1",
   "description": "acerca de? su bot",
-  "main": "node server.js",
+  "main": "node index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "currency-formatter": "^1.5.5",
